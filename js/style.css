@@ -1,0 +1,228 @@
+html,
+body {
+  margin: 0;
+  background: #fff;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto';
+}
+.screen {
+  width: 40px;
+  height: 90%;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: #4f5c8e;
+  position: relative;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+.screen .touch {
+  position: absolute;
+  display: none;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  z-index: 9998;
+}
+.screen .splashScreen {
+  position: absolute;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1A1B1F;
+}
+.screen .splashScreen svg {
+  height: 3vh;
+  width: auto;
+  margin-right: 6px;
+  transform: translateX(-70px);
+}
+.screen .splashScreen span {
+  font-family: 'Roboto Light';
+  font-size: 3vh;
+  letter-spacing: 6px;
+  color: #fff;
+}
+.screen .app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.screen .app .header {
+  height: 10%;
+  padding: 5% 5% 0 5%;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: #cecece;
+}
+.screen .app .header i {
+  font-size: 3vh;
+}
+.screen .app .body {
+  height: 100%;
+  padding: 5%;
+  color: #fff;
+}
+.screen .app .body .title {
+  font-size: 2.3vh;
+  font-family: 'Montserrat';
+}
+.screen .app .body .pickedPens {
+  height: 100%;
+}
+.screen .app .body .pickedPens .pen {
+  height: 100%;
+  width: 100%;
+  margin: 2vh 0;
+  background: #212433;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+}
+.screen .app .body .pickedPens .pen img {
+  height: 70%;
+  width: 100%;
+  object-fit: cover;
+}
+.screen .app .body .pickedPens .pen .penPanel {
+  height: 30%;
+  display: flex;
+  flex-direction: row;
+  padding: 4%;
+}
+.screen .app .body .pickedPens .pen .penPanel .left {
+  width: 15% !important;
+  display: flex;
+  align-items: center;
+}
+.screen .app .body .pickedPens .pen .penPanel .left img {
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.screen .app .body .pickedPens .pen .penPanel .right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.screen .app .body .pickedPens .pen .penPanel .right .penTitle,
+.screen .app .body .pickedPens .pen .penPanel .right .penAuthor {
+  font-size: 1.5vh;
+  margin-left: 1vw;
+}
+.screen .app .body .pickedPens .pen .penPanel .right .penAuthor {
+  color: #cecece;
+}
+.screen .app .body .pickedPens .pen .penPanel .right .penActions {
+  font-size: 1.5vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.screen .app .body .pickedPens .pen .penPanel .right .penActions i {
+  font-size: 1.5vh;
+  margin: 2px;
+  vertical-align: -1px;
+}
+.screen .app .body .pickedPens .pen .penPanel .right .penActions span:nth-child(3) i {
+  color: red;
+}
+.screen .app .selectedPen {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.screen .app .selectedPen img {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
+}
+.screen .app .selectedPen #focusOnHtml {
+  position: absolute;
+}
+.screen .app .selectedPen .footer {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: black;
+  color: #fff;
+}
+.screen .app .selectedPen .footer div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+}
+.screen .app .selectedPen .footer div i {
+  font-size: 3vh;
+}
+.screen .app .selectedPen .footer div:first-child {
+  position: relative;
+}
+.screen .app .selectedPen .footer div:first-child .after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 4px;
+  width: 100%;
+  background-color: #f4cf29;
+}
+.screen .app .selectedPen .footer div:nth-child(odd) {
+  background-color: #2B2E41;
+}
+.screen .app .selectedPen .footer div:nth-child(even) {
+  background-color: #212433;
+}
+.screen .app .selectedPen .footer i {
+  color: #fff;
+}
+.screen .app .selectedPen .footer i:first-child {
+  color: #f4cf29;
+}
+.screen .app .footer {
+  height: 10%;
+  width: 100%;
+}
+.showcase {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.showcase span {
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+  color: #1A1B1F;
+  cursor: pointer;
+}
+.showcase span i {
+  font-size: 4vh;
+  transition: all 0.2s ease;
+}
+.showcase span i:hover {
+  transform: rotate(360deg);
+}
